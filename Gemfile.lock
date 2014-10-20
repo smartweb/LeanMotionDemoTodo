@@ -1,0 +1,18 @@
+GEM
+  remote: http://ruby.taobao.org/
+  specs:
+    ProMotion (2.0.1)
+      methadone (~> 1.4)
+    lean_motion (0.1)
+      methadone (~> 1.7)
+    methadone (1.7.0)
+      bundler
+    rake (10.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ProMotion (~> 2.0)
+  lean_motion
+  rake
