@@ -44,10 +44,18 @@ class TodoScreen < PM::TableScreen
         {
           title: task.content,
           action: :edit_task,
-          arguments: { task: task }
+          arguments: { task: task },
+          editing_style: :delete
         }
       end
     }]
+  end
+
+  def on_cell_deleted(cell)
+    if cell[:arguments]
+      task  = cell[:arguments][:task]
+      task.delete
+    end
   end
 
   def edit_task(task)
