@@ -4,7 +4,7 @@ class AppDelegate < PM::Delegate
   def on_load(app, options)
     init_leancloud
       
-    open_tab_bar HomeScreen.new(nav_bar: true)
+    open_tab_bar TodoScreen.new(nav_bar: true), HomeScreen.new(nav_bar: true)
 
     init_data
   end
